@@ -1,7 +1,7 @@
 <html>
 <body>
 
-  <h1>This server is the property of <%= @name %></h1>
+  <h1>This server is the property of <%= node['chef-centos7-httpd']['owner'] %></h1>
 
   <p> HOSTNAME: <%= node['hostname'] %></p>
   <p>MACHINE_NAME: <%= node['machinename'] %></p>

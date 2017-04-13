@@ -18,6 +18,10 @@ describe command 'wget -qSO- --spider localhost' do
   its('stderr') { should match %r{HTTP/1\.1 200 OK} }
 end
 
+describe command 'curl localhost' do
+  its('stdout') { should match /This server is the property of Jason DeBolt/ }
+end
+
 describe port(80) do
   it { should be_listening }
 end
