@@ -6,7 +6,7 @@
 # found at https://docs.chef.io/inspec_reference.html
 
 describe package 'httpd' do
-  it { should be_installed}
+  it { should be_installed }
 end
 
 describe service 'httpd' do
@@ -19,7 +19,7 @@ describe command 'wget -qSO- --spider localhost' do
 end
 
 describe command 'curl localhost' do
-  its('stdout') { should match /This server is the property of Jason DeBolt/ }
+  its('stdout') { should match(/This server is the property of Jason DeBolt/) }
 end
 
 describe port(80) do
