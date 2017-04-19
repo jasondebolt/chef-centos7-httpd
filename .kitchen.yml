@@ -25,12 +25,14 @@ platforms:
   - name: centos-7.2
     driver:
       name: vagrant
-  - name: amazon
-    driver:
-      image_id: ami-d2c924b2
-    transport:
-      username: centos
-      ssh_key: ~/keys/JasonOregonKeyPair.pem
+      network:
+        - ["forwarded_port", {guest: 80, host: 8080}]
+  #- name: amazon
+  #  driver:
+  #    image_id: ami-d2c924b2
+  #  transport:
+  #    username: centos
+  #    ssh_key: ~/keys/JasonOregonKeyPair.pem
 
 suites:
   - name: default
