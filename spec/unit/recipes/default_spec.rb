@@ -33,5 +33,13 @@ describe 'chef-centos7-httpd::default' do
       expect(chef_run).to enable_service('httpd')
     end
 
+    it 'creates the web_admin user' do
+      expect(chef_run).to create_user('web_admin').with(system: true)
+    end
+
+    it 'creates the web_group group' do
+      expect(chef_run).to create_group('web_admin')
+    end
+
   end
 end
