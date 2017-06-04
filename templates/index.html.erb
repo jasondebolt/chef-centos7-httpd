@@ -1,8 +1,8 @@
 <html>
 <body>
 
-  <h1>This server is the property of <%= node['chef-centos7-httpd']['owner'] %></h1>
-
+  <h1>This node is up.</h1>
+  <p>COOKBOOK_OWNER: <%= node['chef-centos7-httpd']['owner'] %></p>
   <p> HOSTNAME: <%= node['hostname'] %></p>
   <p>MACHINE_NAME: <%= node['machinename'] %></p>
   <p>FQDN: <%= node['fqdn'] %></p>
